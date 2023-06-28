@@ -1,88 +1,26 @@
 #!/usr/bin/python3
-"""defines a square"""
+""" class Square that defines a square"""
 
 
 class Square:
-    """represents a square
-    Attributes:
-    __size (int): size of a side of the square
-    """
+    """ class Square that defines a square"""
+
     def __init__(self, size=0):
-        """Initializes the square
+        """initialize square
         Args:
-            size (int): size of a side of the square
-        Returns:
-            None
-         """
+            size (int): size of the square
+        """
         if type(size) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
         else:
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = size
+            self.__size = size  #: size of the square
 
     def area(self):
-        """calculates square's area
+        """returns the area.
+
         Returns:
-            Current square's area
-         """
-        return (self.__size) ** 2#!/usr/bin/python3
-"""defines a square"""
-
-
-class Square:
-    """represents a square
-    Attributes:
-    __size (int): size of a side of the square
-    """
-    def __init__(self, size=0):
-        """Initializes the square
-        Args:
-            size (int): size of a side of the square
-        Returns:
-            None
-         """
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        else:
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = size
-
-    def area(self):
-        """calculates square's area
-        Returns:
-            Current square's area
-         """
-        return (self.__size) ** 2#!/usr/bin/python3
-"""defines a square"""
-
-
-class Square:
-    """represents a square
-    Attributes:
-    __size (int): size of a side of the square
-    """
-    def __init__(self, size=0):
-        """Initializes the square
-        Args:
-            size (int): size of a side of the square
-        Returns:
-            None
-         """
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        else:
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = size
-
-    def area(self):
-        """calculates square's area
-        Returns:
-            Current square's area
-         """
-        return (self.__size) ** 2
+            ares.
+        """
+        return self.__size**2
