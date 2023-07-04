@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class Rectangle that defines a rectangle based on 3-rectangle.py
+"""A class Rectangle that defines a rectangle based on 3-rectangle.py
 """
 
 
@@ -96,8 +96,3 @@ class Rectangle:
 
     def __repr__(self):
         return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
-
-    def __del__(self):
-        """[summary]
-        """
-        print("Bye rectangle...")
