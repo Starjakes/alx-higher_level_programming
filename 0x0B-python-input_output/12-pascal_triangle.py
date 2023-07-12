@@ -1,37 +1,39 @@
 #!/usr/bin/python3
-""" A Module that defines the class Student
+"""defines a Pascal's Triangle function."""
+
+
+def pascal_triangle(n):
+    """"module for printing pascal triangle"""
+    """
+    if n < 0:
+        return []
+    elif n == 1:
+        return [1]
+    elif n == 2:
+        return [[1], [1, 1]]
+    """
+    array = []
+
+    for x in range(1, n + 1):
+        array.append([1] * x)
+
+    for j in range(2, n):
+        row = array[j]
+        anterior = array[j - 1]
+
+        for k in range(1, len(row) - 1):
+            row[k] = anterior[k - 1] + anterior[k]
+
+    return array
+
+
 """
-
-
-class Student:
-    """ create student instances """
-
-    def __init__(self, first_name, last_name, age):
-        """ Special method to initialize """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-
-    def to_json(self, attrs=None):
-        """ returns directory description """
-        obj = self.__dict__.copy()
-        if type(attrs) is list:
-
-            for item in attrs:
-                if type(item) is not str:
-                    return obj
-
-            d_list = {}
-
-            for iatr in range(len(attrs)):
-                for satr in obj:
-                    if attrs[iatr] == satr:
-                        d_list[satr] = obj[satr]
-            return d_list
-
-        return obj
-
-    def reload_from_json(self, json):
-        """ replaces all attributes of the Student instance """
-        for atr in json:
-            self.__dict__[atr] = json[atr]
+    print(array)
+if __name__ == "__main__":
+    print(pascal_triangle(4))
+[1]
+[1, 1]
+[1, 2, 1]
+[1, 3, 3, 1]
+[1, 4, 6, 4, 1]
+"""
