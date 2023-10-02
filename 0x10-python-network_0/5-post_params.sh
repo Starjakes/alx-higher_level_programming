@@ -1,3 +1,3 @@
 #!/bin/bash
-# # A Bash script that sends a POST request to a URL with a variables sent
-curl -s -d "starjakese@gmail.com" -d "subject=I will always be here for PLD" -X "POST" "$1
+# Bash scripts that sends a POST request to a given URL.
+curl -s -X POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
