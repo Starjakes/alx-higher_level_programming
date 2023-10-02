@@ -1,9 +1,14 @@
 #!/bin/bash
 
 # Set the target URL
-url="http://0.0.0.0:5000/catch_me"
+URL="http://0.0.0.0:5000/catch_me"
 
-# Send a POST request with a custom header
-curl -X POST "$url" -H "Custom-Header: You got me!" >/dev/null 2>&1
+# Create a JSON file with the required content
+echo '{"key": "You got me!"}' > request.json
 
-# The server response will be displayed by curl, so we don't need to echo anything
+# Send a POST request with the JSON file
+curl -s -X POST -H "Content-Type: application/json" -d @request.json "$URL" >/dev/null 2>&1
+
+# Clean up the temporary JSON file
+rm request.json
+
