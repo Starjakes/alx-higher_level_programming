@@ -1,3 +1,3 @@
 #!/bin/bash
-# send a post request with custome data
-curl -s "$1" -X POST -d "email=starjakese@gmail.com&subject=I will always be here for PLD"
+# # A Bash script that sends a POST request to a URL with a variables sent
+curl -s -d "starjakese@gmail.com" -d "subject=I will always be here for PLD" -X "POST" "$1
